@@ -51,3 +51,15 @@ interface VKDataPolicyPayload {
 
   - `uuid` — уникальная строка, полученная после принятия пользовательского соглашения;
   - `policyAccepted` — флаг принятия пользовательского соглашения.
+
+## Пример реализации метода
+
+Ниже представлен пример встраивания модального окна:
+
+```typescript
+Connect.userDataPolicy(uuid: '3422b448-2460-4fd2-9183-8000de6f8343')
+ .show()
+.then(() => {
+ console.log('Policy was accepted');
+ });
+```
